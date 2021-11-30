@@ -1,0 +1,25 @@
+<%-include("./partials/header")%>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Todo App For Aliens</a>
+    </div>
+  </nav>
+
+  <div class ="container mt-5">
+    <form action="/add/todo" method="POST" class="d-flex">
+        <input type="text" name="todo " id="" class="form-control" placeholder="Enter what you want to do on earth">
+
+    <input type="submit" value="Add Todo" class="btn btn-mid btn-primary mx-5">
+    </form>
+
+    <ul class="list-group my-6" >
+      <% todo.forEach(function(todos){ %>
+          <li class="list-group-item"><%= todos %></li>
+
+      <% }); %>
+        
+    </ul>
+  </div>
+
+<%- include("./partials/footer") %>
